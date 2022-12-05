@@ -1,0 +1,121 @@
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>*{margin:0;padding:0;box-sizing:border-box}
+            body,html{
+             height:100vh;width:100vw;margin:0;padding:0;box-sizing:border-box;display:flex}
+                .m_main-section{height:500px;width:800px}
+                .m_main-section .m_row{width:100%;height:calc(100%/3);
+            
+                display:flex}.m_row.m_center{}
+                .m_block{height:100%;width:200px;display:flex}
+                .m_block p{font-size:20px;color:black}
+                #m_block1{background:#ff0000}
+                #m_block2{background:#ffff00}
+                #m_block3{background:#008000}
+                #m_block4{background:#ffa500}
+                .m_btn{padding:10px}.m_instruction-section{margin-bottom:50px}
+                .m_instruction-section p{margin-bottom:10px;color:#000;font-size:18px;font-weight:bold}
+                .m_instruction-section ul{font-size:16px;color:#000;list-style:none}.m_instruction-section ul li{margin-bottom:10px}
+        </style>
+    </head>
+    <body>
+       
+        <div>
+        
+    
+            <div class="m_main-section">
+            
+                <div class="m_row">
+                    <div id="m_block1" class="m_block">
+                        <p>1</p>
+                    </div>
+                    <div id="m_block2" class="m_block">
+                        <p>2</p>
+                    </div>
+                </div>
+    
+            <div class="m_row m_center">
+                <button class="m_btn" onclick="Aclock()">
+                    Anti-Clockwise
+                </button>
+                <button class="m_btn" onclick="clock()">
+                    Clockwise
+                </button>
+            </div>
+    
+            <div class="m_row">
+                <div id="m_block4" class="m_block">
+                    <p>4</p>
+                </div>
+                <div id="m_block3" class="m_block">
+                    <p>3</p>
+                </div>
+            </div>
+    
+        </div>
+    
+        
+    </div>
+
+    <script>
+
+        
+
+        function clock()  {
+            
+                
+         var temp;
+         var colo1 =    window.getComputedStyle(document.getElementById("m_block1")).backgroundColor;
+
+         var colo2 =    window.getComputedStyle(document.getElementById("m_block2")).backgroundColor;
+         var colo3 =    window.getComputedStyle(document.getElementById("m_block3")).backgroundColor;
+         var colo4 =    window.getComputedStyle(document.getElementById("m_block4")).backgroundColor;
+         
+         temp = colo4;
+         colo4 = colo3;
+         colo3 = colo2;
+         colo2 = colo1;
+         colo1 = temp;
+
+         document.getElementById("m_block1").style.backgroundColor = colo1;
+         document.getElementById("m_block2").style.backgroundColor = colo2;
+         document.getElementById("m_block3").style.backgroundColor = colo3;
+         document.getElementById("m_block4").style.backgroundColor = colo4;
+            
+        }
+
+        function Aclock (){
+
+            var temp;
+         var colo1 =    window.getComputedStyle(document.getElementById("m_block1")).backgroundColor;
+
+         var colo2 =    window.getComputedStyle(document.getElementById("m_block2")).backgroundColor;
+         var colo3 =    window.getComputedStyle(document.getElementById("m_block3")).backgroundColor;
+         var colo4 =    window.getComputedStyle(document.getElementById("m_block4")).backgroundColor;
+         
+         temp = colo1;
+         colo1 = colo2;
+         colo2 = colo3;
+         colo3 = colo4;
+         colo4 = temp;
+
+         document.getElementById("m_block1").style.backgroundColor = colo1;
+         document.getElementById("m_block2").style.backgroundColor = colo2;
+         document.getElementById("m_block3").style.backgroundColor = colo3;
+         document.getElementById("m_block4").style.backgroundColor = colo4;
+        
+            
+        }
+            
+    </script>
+    
+    </body>
+    </html>
+
+
